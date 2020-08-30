@@ -1,0 +1,88 @@
+<!-- <p>test works!</p> -->
+
+<div class="container-fluid">
+    <div class="row mt-2 ml-2">
+        <div class="col">
+            <h1 id="site">Hack India</h1>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container">
+    <form>
+        <div class="form-group">
+            <label for=""></label>
+        </div>
+    </form>
+</div> -->
+
+
+<div class="container " id='full'>
+    
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="col-md-12 col-sm-12 text-center mt-2">
+                <input type="button" id="xyz" style="border: 1px solid black" value="1" (click)= flipQuestionEventHandler(1)>
+                <input type="button" id="xyz" value="2" style="border: 1px solid black" (click)= flipQuestionEventHandler(2)>
+                <input type="button" id="xyz" value="3" style="border: 1px solid black" (click)= flipQuestionEventHandler(3)>
+                <input type="button" id="xyz" value="4" style="border: 1px solid black" (click)= flipQuestionEventHandler(4)>
+                <input type="button" id="xyz" value="5" style="border: 1px solid black" (click)= flipQuestionEventHandler(5)>
+                <input type="button" id="xyz" value="6" style="border: 1px solid black" (click)= flipQuestionEventHandler(6)>
+                <input type="button" id="xyz" value="7" style="border: 1px solid black" (click)= flipQuestionEventHandler(7)>
+                <input type="button" id="xyz" value="8" style="border: 1px solid black" (click)= flipQuestionEventHandler(8)>
+                <input type="button" id="xyz" value="9" style="border: 1px solid black"(click)= flipQuestionEventHandler(9)>
+                <input type="button" id="xyz" value="10" style="border: 1px solid black" (click)= flipQuestionEventHandler(10)>
+             
+            </div>
+        </div> 
+    </div>
+
+    <div class="row mt-2 mb-4">
+        <div class="col-12 " style="background-color: rgba(47, 79, 79, 0.6); border:2px solid black;">
+            <h3  style="margin:15px;"> Question No: {{currentQNo}} </h3> 
+       </div>
+    </div>
+    
+
+    <p>{{qArray[currentQNo - 1].qText | json}}</p>
+
+    <div class="radio">
+        <label><input type="radio" name="optradio" [checked]="selectedRadio==1" (change)="changeEventHandler(1)">
+            {{qArray[currentQNo - 1].option1 | json}}
+        </label>
+    </div>
+    <div class="radio">
+        <label><input type="radio" name="optradio" [checked]="selectedRadio==2" (change)="changeEventHandler(2)">
+            {{qArray[currentQNo - 1].option2 | json}}
+        </label>
+    </div>
+    <div class="radio">
+        <label><input type="radio" name="optradio" [checked]="selectedRadio==3" (change)="changeEventHandler(3)">
+            {{qArray[currentQNo - 1].option3 | json}}
+        </label>
+    </div>
+
+    <div class="radio">
+        <label><input type="radio" name="optradio" [checked]="selectedRadio==4" (change)="changeEventHandler(4)">
+            {{qArray[currentQNo - 1].option4 | json}}
+        </label>
+    </div>
+
+    <div class="mt-4">
+        <div class="row">
+            <div class="col-2" *ngIf="currentQNo!=1">
+                <input type="button" class="mb-4" id ="btn2" value="Previous" (click)= "previousEventHandler()">
+            </div>
+            <div class="col-2" *ngIf="currentQNo!=10">
+                <input type="button" class="mb-4" id='btn' value="Next" (click)= "nextEventHandler()">
+            </div>
+        </div>
+        
+        <div *ngIf="currentQNo==10"> 
+            <input type="button" class="mb-4" id='btn2' value="Submit" (click)= "submitEventHandler()">
+        </div>
+    </div>
+    
+</div>
+
+

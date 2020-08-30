@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+
+#full
+{
+    background-color:whitesmoke;
+}
+
+#heading
+{
+    margin-top: 10px; 
+    text-align: center; 
+    font-family: 'Lacquer', cursive;
+    font-size: 6vw;
+}
+
+#txt
+{
+    font-size: 2vw;
+}
+
+
+#cb2
+{
+    color: red;
+    font-size: 15px;
+}

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Indie+Flower&display=swap');
+
+
+#site
+{
+    margin-top: 20px;
+    text-align: center;
+    align-self: center;
+    font-family: 'Lacquer', cursive;
+    font-size: 6vw;
+}
+
+#ins
+{
+    border: solid black 2px;
+    background-color: whitesmoke;
+}
+
+#btn
+{
+    background-color: rgb(9, 89, 114);
+    color: white;
+    width: 80px;
+    font-size: 18px;
+}

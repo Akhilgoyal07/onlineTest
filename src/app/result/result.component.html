@@ -1,0 +1,68 @@
+
+<div class="container mt-5" >
+    <div class="row mt-2 ml-2">
+        <div class="col">
+            <h1 id="site">Hack India</h1>
+        </div>
+    </div>
+
+    <div class="text-center " style="margin-top: 50px;  border:black solid 2px ">
+        <h1 class="mt-2" style="color: rgb(153, 0, 255)">Thanks for taking the test</h1>
+
+        <h1>Final Result ={{score}}</h1>
+        <div *ngIf="score<7; then ifTemplate; else elseTemplate" >
+
+        </div>
+        <ng-template #ifTemplate>
+            <h1 style="color:crimson">Sorry, You have failed the test. </h1>
+        </ng-template>
+        <ng-template #elseTemplate>
+            <h1 style="color:darkgreen">Congratulations you have successfully passed the Test</h1> 
+        </ng-template>
+
+
+        <div class="row mt-4 mb-4">
+            <div class="col-2 offset-5 ">
+                <input type="button" class="btn btn-primary " id="btn" value="Return to Login Page"
+                (click)="clickEventHandler()">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- <p>result works!</p>
+<div class="container-fluid">
+    <div class="row mt-2 ml-2">
+        <div class="col">
+            <h1 id="site">Hack India</h1>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-4 offset-4 " id='res'>
+        <p>Your Score : {{score}}</p>
+    </div>
+</div>
+
+<div class="text-center" *ngIf="score<5; then ifTemplate; else elseTemplate" >
+
+</div>
+<ng-template #ifTemplate>
+<h1 style="color:crimson">Sorry, You Won't be able to go for further rounds </h1>
+</ng-template>
+<ng-template #elseTemplate>
+
+   <h1 style="color:darkgreen">Congratulations you Have Passed the Test</h1> 
+</ng-template>
+
+<div class="row mt-4">
+    <div class="col-2 offset-5 ">
+        <input type="button" class="btn btn-primary " id="btn" value="Return to Login Page"
+        (click)="clickEventHandler()">
+    </div>
+</div>
+ -->

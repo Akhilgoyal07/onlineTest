@@ -1,0 +1,77 @@
+<!-- <p>login works!</p> -->
+
+<div class="container-fluid" id="full" >
+    <div class="row mt-5">
+
+        <div class="col-md-1">
+
+        </div>
+      
+        <div class="col-md-5 col-sm-12 text-center mt-2 mb-2">
+            <img src="../assets/log.jpg" class="img-fluid" alt="pic" id="log" >
+        </div>
+
+        <div class="col-md-5 col-sm-12 align-self-center" id="loginDiv">
+            <div class="row">
+                <div class="col">
+                    <h1 id="site">Hack India</h1>
+                </div>
+            </div>
+
+            
+        
+            <div class="row justify-content-around">
+                <div class="col-7" id="loginSection">
+
+                    <form class="row" [formGroup]="loginForm">
+                        <div class="form-group col-10 offset-1 mt-4" >
+                            <input class="form-control" formControlName="userName" id="username" type="text"
+                             name="userName" placeholder="Enter your username">
+                            
+                            <div *ngIf="loginForm.get('userName').errors?.required && (loginForm.get('userName').touched || !loginForm.get('userName').pristine)">
+                                <p id='cb2'> Username is required.</p>
+                            </div>
+
+                        </div>
+                        <div class="form-group col-10 offset-1">
+                            <input class="form-control" formControlName="password" id="password" type="password" name="password"
+                             placeholder="Enter your password">
+
+                            <div *ngIf="loginForm.get('password').errors?.required && (loginForm.get('password').touched || !loginForm.get('password').pristine)">
+                                <p id='cb2'> Password is required. </p>
+                            </div>
+                            <div *ngIf="loginForm.get('password').errors?.minlength && (loginForm.get('password').touched || !loginForm.get('password').pristine)">
+                                <p id='cb2'> Minimum length of password must be 8. </p>
+                            </div>
+                            <div *ngIf="!loginForm.get('password').errors?.minlength && loginForm.get('password').errors?.pattern" >
+                                <p id='cb2'> Password must contain a special character. </p>
+                            </div>
+
+                        </div>
+                        <div class="form-group col-10 offset-1">
+                            <input type="checkbox"><label class="ml-1" id="cb">Remember me</label>
+                        </div>
+
+                        <div class="justify-content around">
+                            <h6 id ="errormessage" class="ml-5 text-color:wheat"> </h6>
+                        </div>
+                    
+                        <div class="form-group col-10 offset-1">
+                            <input class="btn btn-info w-100 " type="button" value="Login" [disabled]="!loginForm.valid"
+                            (click)="loginEventHandler()">
+                        </div>
+                        <div class="form-group col-10 offset-1">
+                            <input class="btn btn-info w-100" type="button" value="Login with Google">
+                        </div>
+                        <div class="form-group col-10 offset-1" >
+                            <input class="btn btn-info w-100" type="button" value="Sign Up"
+                            (click)="signUpEventHandler()">
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
